@@ -1,0 +1,21 @@
+"apple" : "I am a red fruit"
+1: "this is my roll number"  #key value
+---
+# lists
+- apple
+- mango        
+- banana
+- Mango      #lists 
+---
+cities: 
+ - new delhi
+ - mumbai
+ - gujrat
+ - palam     #blocks style
+ 
+---
+cities: [new delhi, mumbai]
+---
+{mango: "yellow fruit", age: 54}
+
+...

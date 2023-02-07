@@ -1,0 +1,50 @@
+# 3 ways to write String in YAML
+myself : Gulshan kumar Prasad
+fruit : "apple"
+job : 'swe'
+
+
+bio : |
+hey my name is Gulshan Kumar Prasad
+i'm a good guy.
+
+# write a single line in multiple lines
+message : >
+this will 
+all be in 
+one single line
+
+#above will show in output as
+message : !!str this will all be in one single line
+
+number : 5345
+marks : 543.54
+booleanValue : !!bool NO # n,N, false, False, FALSE
+# same for true --> yes, y, Y
+
+
+# specify the type
+
+zero : !!int 0
+positiveNum : !!int 45
+negativeNum : !!int -435
+binaryNum: !!int 0b11001
+octalNum: !!int 06574
+hexa: !!int 0x45
+commaValue: !!int +540_000 # 540,000
+exponential numbers: 6.023E56
+
+# floating point number
+marks : !!float 54.43
+infinite : !!float .inf
+not a num : .nan
+
+
+# null
+surname : !!null Null # or null, NULL, ~
+~ : this is a null key
+
+# dates and time
+date : !!timestamp  2433-34-54
+india time : 2001-12-15T84:23:23.10 +5:30
+no time zone : 2001-12-15T84:23:23.10 
