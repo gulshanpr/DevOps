@@ -21,12 +21,85 @@ sparse seq:
  - mango
  - apple
  - banana
--
+-     # one - command to nest list
  - marks
  - roll num
  - date
 
 # key : value pairs are called maps
-!!maps
+!!map
+
+#nested mapping: map within an map
+name: Gulshan Kumar Prasad
+role:
+  age: 45
+  job: student 
+
+#same as
+name: Gulshan Kumar Prasad
+role: {age: 45, job: student}
+
+# pairs: keys may have duplicate values
+# !!pairs
+
+pair example: !!pairs
+ - job: student
+ - job: teacher
+
+# same as
+pair example: !!pairs [job: student, job: teacher]
+
+#this will be an arrray of hashtable  
+
+# !!set will allow you to have unique values
+
+names: !!set
+? Gulshan Kumar Prasad
+? Sandy
+? Yo man
+
+# dictionary !!omap
+people: !!omap
+  - Gulshan Kumar Prasad:
+     -name: Gulshan Kumar Prasad
+     -age: 34
+     -height: 536
+  - Prasad: 
+    -name: Prasad
+    -age: 35
+    -height: 876    #we do this we we need to put objects in seq
+
+
+# reusing some properties using anchors # anchors do copy pasting
+liking: &love
+  - fav animal: dog
+  - hates: everything
+
+hates: &dk
+  - hates: nothing
+
+person1:
+  - name: Gulshan Kumar Prasad
+  <<: *love
+
+person2:
+  - name: Aakash
+  <<: *love
+  hates: literally everything # this will overwrite from pasting from love
+
+#this will look like
+
+person2:
+  name: Aakash
+  fav animal: dog
+  hates: literally everything
+
+person3:
+  name: Rohit
+  fav animal: idk
+  <<: *dk 
+
+
+
 
 
