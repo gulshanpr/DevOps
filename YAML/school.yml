@@ -1,0 +1,7 @@
+School:
+-name: "ESL"
+-principal: "me myself"
+-Students: 
+   -rno: 52
+   -name: Gulshan Kumar Prasad
+   -marks: 345

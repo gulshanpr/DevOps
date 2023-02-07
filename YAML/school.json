@@ -1,0 +1,19 @@
+{
+    "School": [
+        {
+          "name": "ESL",
+          "principal": "me myself",
+          "Students": [
+             {
+                "rno": 42,
+                "name": "Gulshan Kumar Prasad",
+                "marks":341
+ 
+             }
+          ]
+ 
+        }
+    ]
+ 
+ 
+ }
